@@ -14,7 +14,7 @@ In order to make the CodeSpace work, you should have a GitHub account: if you do
 In order to be able to write files, take notes and modify the environment, you should first copy this repository under your own user. 
 This operation is called "fork": it is sufficient to click the fork button on the top right of the repository main page, and select to fork it under your user.
 
-![fork](.imgs/create_fork.png)
+![fork](imgs/create_fork.png)
 
 ### 3. Launch the Space
 
