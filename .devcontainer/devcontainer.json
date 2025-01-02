@@ -1,0 +1,28 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/jupyter-datascience-notebooks
+{
+	"name": "datascience-jupyter",
+	"image": "jupyter/scipy-notebook",
+	// Forward Jupyter port locally, mark required
+	"forwardPorts": [8888],
+	"portsAttributes": {
+		"8888": {
+			"label": "Jupyter"
+		}
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.python"
+			]
+		}
+	},
+	"remoteEnv": {
+                 "PATH": "${containerEnv:PATH}:/usr/local/bin"
+         },
+	"postStartCommand": "jupyter lab --ip 0.0.0.0 --no-browser --NotebookApp.token='' --NotebookApp.password=''"
+}
